@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Compare illustrative routes against public elevation data. A geospatial engineering demonstration by Frederick Abalo."
+    />
+    <title>Terrain-aware route explorer · Frederick Abalo</title>
+  </head>
+  <body>
+    <header>
+      <a class="identity" href="https://github.com/Freddie999"
+        >FA / GEOSPATIAL ENGINEERING</a
+      ><a href="https://github.com/Freddie999/terrain-route-explorer"
+        >Source & methodology ↗</a
+      >
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">BOULDER, COLORADO · PUBLIC TERRAIN DATA</p>
+          <h1>The shortest line<br />is only half the story.</h1>
+          <p>
+            Explore how terrain changes along two illustrative routes.<br />Compare
+            distance, ascent, and sampled grade.
+          </p>
+        </div>
+        <div class="tag">
+          Engineering demonstration<br /><small
+            >Not a navigation or flight-planning tool</small
+          >
+        </div>
+      </section>
+      <div class="workspace">
+        <aside>
+          <h2>Choose an alignment</h2>
+          <label for="route">Illustrative route</label
+          ><select id="route"></select>
+          <p id="route-description"></p>
+          <label for="spacing">Maximum sample spacing</label
+          ><select id="spacing">
+            <option value="50">50 metres</option>
+            <option value="100" selected>100 metres</option>
+            <option value="250">250 metres</option></select
+          ><label for="threshold"
+            >Highlight absolute grade above
+            <output id="threshold-value">15%</output></label
+          ><input
+            id="threshold"
+            type="range"
+            min="5"
+            max="40"
+            value="15"
+            step="1"
+          />
+          <p class="legend"><span></span> Above threshold</p>
+          <div id="stats" aria-live="polite"></div>
+          <label class="upload" for="upload">Load your GeoJSON LineString</label
+          ><input
+            id="upload"
+            type="file"
+            accept=".json,.geojson,application/json"
+          />
+          <p class="muted">
+            Stays in this browser. Limited to the bundled coverage; 50 km
+            maximum.
+          </p>
+          <button id="download">Download sampled profile CSV</button>
+          <p id="status" role="status">Loading bundled terrain…</p>
+        </aside>
+        <section class="visuals">
+          <div id="map" aria-label="Route map with elevation backdrop"></div>
+          <div class="profile">
+            <h2>Elevation along route <span>metres</span></h2>
+            <svg
+              id="chart"
+              role="img"
+              aria-label="Elevation profile"
+              viewBox="0 0 800 180"
+            ></svg>
+            <p id="sample-detail">
+              Move over the elevation profile to locate a sample on the map.
+            </p>
+          </div>
+        </section>
+      </div>
+      <section class="notes">
+        <div>
+          <h2>What the numbers mean</h2>
+          <p>
+            Distance uses a spherical Earth model. Elevation is bilinearly
+            sampled from one zoom-11 Terrarium tile. Grade is the elevation
+            change divided by horizontal distance between samples. Ascent sums
+            positive changes.
+          </p>
+        </div>
+        <div>
+          <h2>Assumptions in plain sight</h2>
+          <p>
+            Routes are illustrative, not verified roads or trails. Terrain
+            pixels are roughly 59 m wide here; denser samples do not add source
+            detail. No buildings, vegetation, airspace, access rights, weather,
+            or obstacle-clearance model is included.
+          </p>
+        </div>
+        <div>
+          <h2>Data & attribution</h2>
+          <p>
+            Elevation: Mapzen Terrain Tiles on AWS; USGS 3DEP, GMTED2010 and
+            SRTM; NOAA ETOPO1.
+            <a
+              href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+              >Source terms</a
+            >
+            · <a href="./data/provenance.json">Download provenance</a>. Basemap
+            ©
+            <a href="https://www.openstreetmap.org/copyright"
+              >OpenStreetMap contributors</a
+            >. Terrain and analysis remain available if basemap tiles fail.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Built by Frederick Abalo · Independent portfolio demonstration ·
+      <a href="https://geomersive.org">Geomersive</a>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

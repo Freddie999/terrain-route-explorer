@@ -1,0 +1,9 @@
+{
+  "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/424/775.png",
+  "retrievedAt": "2026-10-10T02:03:00.594Z",
+  "sha256": "e48508bb0cb1ae75516720d8d834a21ce3e075676cfc84797ec7474a376d1de6",
+  "encoding": "Terrarium: R*256+G+B/256-32768 metres",
+  "processing": "Decoded 256x256 RGB tile to numeric elevations; no smoothing or vertical datum conversion.",
+  "attribution": "Mapzen Terrain Tiles; USGS 3DEP, GMTED2010 and SRTM; NOAA ETOPO1",
+  "sources": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "terrain-route-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
+    "data:refresh": "node scripts/fetch-terrain.mjs"
+  },
+  "dependencies": {
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0",
+    "pngjs": "7.0.0"
+  }
+}

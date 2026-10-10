@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Foothill traverse",
+        "description": "Illustrative westward line into rising terrain; not a surveyed trail."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.305,
+            40.015
+          ],
+          [
+            -105.315,
+            40.015
+          ],
+          [
+            -105.328,
+            40.02
+          ],
+          [
+            -105.345,
+            40.022
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valley approach",
+        "description": "Illustrative alternate alignment; no road or access constraints."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.305,
+            40.015
+          ],
+          [
+            -105.31,
+            40.025
+          ],
+          [
+            -105.325,
+            40.03
+          ],
+          [
+            -105.34,
+            40.03
+          ],
+          [
+            -105.345,
+            40.022
+          ]
+        ]
+      }
+    }
+  ]
+}
