@@ -4,7 +4,7 @@ Compare two illustrative alignments against public elevation data near Boulder, 
 
 **[Open the demo](https://freddie999.github.io/terrain-route-explorer/)** · [Source data provenance](public/data/provenance.json)
 
-**Status:** independent engineering demonstration, not a route optimizer, navigation product, or flight-planning system. Built for Frederick Abalo's portfolio with AI-assisted implementation. The alignments are synthetic; the elevations are real public data. No Zipline code, routes, or operational data is used.
+**Status:** independent engineering demonstration, not a route optimizer, navigation product, or flight-planning system. Built for Frederick Abalo's portfolio. The alignments are synthetic; the elevations are real public data. No Zipline code, routes, or operational data is used.
 
 ![Terrain explorer](docs/demo.jpg)
 
